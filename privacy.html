@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Amaterasu</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+    .updated { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent); }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    ul { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-muted); }
+    li { margin-bottom: 0.4rem; }
+    .highlight-box {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .highlight-box p { color: #e2e8f0; margin-bottom: 0; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-text">Amaterasu</div>
+      <a href="index.html">&larr; Volver al inicio</a>
+    </header>
+
+    <h1>Política de Privacidad de Amaterasu</h1>
+    <div class="updated">Última actualización: 12 de noviembre de 2026</div>
+
+    <p>
+      Esta Política de Privacidad describe cómo la aplicación personal <strong>Amaterasu</strong> accede, 
+      utiliza, almacena y protege la información del usuario obtenida a través de las API de Google, 
+      específicamente la API de Google Drive.
+    </p>
+
+    <h2>1. Información que Recopilamos y Permisos Solicitados</h2>
+    <p>Amaterasu solicita únicamente los siguientes permisos mediante el protocolo estándar Google OAuth 2.0:</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/drive.readonly</code>: Permiso de solo lectura para listar y descargar los archivos multimedia que el propio usuario tiene almacenados en su unidad o unidades compartidas de Google Drive. Amaterasu nunca crea, edita, renombra ni elimina archivos en Google Drive.</li>
+      <li><code>https://www.googleapis.com/auth/userinfo.email</code>: Identifica la dirección de correo de la cuenta de Google vinculada para gestionar adecuadamente las credenciales y diferenciar múltiples cuentas autorizadas por el usuario.</li>
+      <li><code>https://www.googleapis.com/auth/userinfo.profile</code>: Muestra el nombre visible asociado a la cuenta dentro de la consola privada del usuario.</li>
+    </ul>
+
+    <h2>2. Uso de la Información</h2>
+    <p>La información a la que accede Amaterasu se utiliza única y exclusivamente para:</p>
+    <ul>
+      <li>Comprobar la disponibilidad de los archivos multimedia seleccionados para su descarga.</li>
+      <li>Descargar los archivos seleccionados directamente hacia el almacenamiento privado local del usuario.</li>
+      <li>Renovar automáticamente los tokens de acceso temporales para mantener la descarga activa sin interrupciones.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>Declaración de Uso Limitado de Google (Limited Use Disclosure):</strong><br>
+        El uso y la transferencia que Amaterasu haga a cualquier otra aplicación de la información recibida a través de las API de Google se apegará estrictamente a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Política de Datos de Usuario de los Servicios de las API de Google</a>, incluidos los requisitos de Uso Limitado (Limited Use requirements).
+      </p>
+    </div>
+
+    <h2>3. Almacenamiento y Protección de Datos</h2>
+    <p>
+      Amaterasu es un software privado auto-hospedado (self-hosted). Todas las credenciales, identificadores de clientes y tokens de actualización (refresh tokens) se almacenan de manera local y cifrada utilizando algoritmos criptográficos robustos en el propio hardware privado del usuario.
+    </p>
+    <p>
+      Ninguna credencial ni archivo se transmite a servidores externos de telemetría, análisis o terceros.
+    </p>
+
+    <h2>4. No Comercialización ni Compartición con Terceros</h2>
+    <p>
+      Amaterasu no vende, no alquila, no cede y no comparte información de los usuarios ni datos obtenidos de Google con ninguna empresa, anunciante o tercero. Los datos nunca se utilizan para entrenamiento de modelos de inteligencia artificial o aprendizaje automático generalizado.
+    </p>
+
+    <h2>5. Revocación de Acceso</h2>
+    <p>
+      El usuario puede revocar el acceso de Amaterasu a su cuenta de Google en cualquier momento desde la página de configuración de seguridad de su cuenta de Google en: 
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">https://myaccount.google.com/permissions</a>. Al revocar el acceso, todos los tokens almacenados localmente quedarán inmediatamente invalidados.
+    </p>
+
+    <h2>6. Contacto</h2>
+    <p>
+      Si tiene preguntas o dudas sobre esta política de privacidad o sobre el funcionamiento de Amaterasu, puede ponerse en contacto con el desarrollador y administrador responsable:
+    </p>
+    <p>
+      <strong>Correo de contacto:</strong> <a href="mailto:miky.dr14@gmail.com">miky.dr14@gmail.com</a>
+    </p>
+
+    <footer>
+      <div>&copy; 2026 Amaterasu. Uso privado y personal.</div>
+      <div><a href="index.html">Inicio</a></div>
+    </footer>
+  </div>
+</body>
+</html>

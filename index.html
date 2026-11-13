@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amaterasu — Sistema de Automatización y Gestión Multimedia</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --badge: #0369a1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+    .badge {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+    h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent); }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-muted); }
+    li { margin-bottom: 0.5rem; }
+    .card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-text">Amaterasu</div>
+      <span class="badge">Uso Personal y Privado</span>
+    </header>
+
+    <h1>Automatización y Gestión de Medios Personales</h1>
+    <p>
+      <strong>Amaterasu</strong> es una aplicación privada de software diseñada para la sincronización, 
+      organización y respaldo de archivos multimedia personales almacenados en Google Drive hacia plataformas 
+      privadas de streaming y almacenamiento en la nube (Telegram y Stremio).
+    </p>
+
+    <div class="card">
+      <h2>Funcionalidades Principales</h2>
+      <ul>
+        <li><strong>Lectura de Google Drive:</strong> Inspecciona carpetas y unidades compartidas autorizadas por el usuario para detectar contenidos audiovisuales personales.</li>
+        <li><strong>Descarga Segura:</strong> Transfiere archivos multimedia utilizando la API oficial de Google Drive v3 de forma directa y cifrada.</li>
+        <li><strong>División Virtual y Procesamiento:</strong> Prepara fragmentos de transmisión compatibles con reproductores multimedia sin almacenamiento duplicado.</li>
+        <li><strong>Sin Publicidad ni Terceros:</strong> Amaterasu no contiene anuncios, no monetiza datos y se ejecuta de forma autosuficiente en hardware privado.</li>
+      </ul>
+    </div>
+
+    <h2>Privacidad y Uso de la Información</h2>
+    <p>
+      Amaterasu solicita acceso estrictamente de solo lectura (<code>drive.readonly</code>) para descargar los archivos seleccionados 
+      por el propio usuario. En ningún momento Amaterasu modifica, borra o comparte archivos de su cuenta.
+    </p>
+    <p>
+      Para conocer en detalle cómo protegemos su privacidad y cumplimos la Política de Datos de Usuario de los Servicios de las API de Google, 
+      consulte nuestra política oficial.
+    </p>
+
+    <footer>
+      <div>&copy; 2026 Amaterasu. Todos los derechos reservados.</div>
+      <div>
+        <a href="privacy.html">Política de Privacidad</a> &bull; 
+        <a href="mailto:miky.dr14@gmail.com">Contacto</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
